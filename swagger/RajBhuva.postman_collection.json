@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "aed921bf-3e58-40d8-a571-bb13ff101d3f",
+		"name": "RajBhuva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27359164"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Addproduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "\"Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvd2F3eWtAbWFpbGluYXRvci5jb20iLCJpYXQiOjE3MTIwNTg2NjAsImV4cCI6MTcxMjA2MjI2MH0.uQKG6S3RInqroQEIKoM7xaYV0QDya6v6iim37kD6eDo\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"banaana\",\r\n            \"price\": 705,\r\n            \"descrption\": \"banana labore dol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"apple\",\r\n            \"price\": 705,\r\n            \"descrption\": \"apple labore dol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/product/edit/660b03134fbf9df2b1f2abb3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"edit",
+								"660b03134fbf9df2b1f2abb3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/product/delete/660b031f4fbf9df2b1f2abb5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"delete",
+								"660b031f4fbf9df2b1f2abb5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/product/660b03134fbf9df2b1f2abb3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"660b03134fbf9df2b1f2abb3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "get data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "add student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"firstname\":\"raj\",\r\n    \"lastname\":\"bhuva\"\r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/student/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"student",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"firstname\":\"rk\",\r\n    \"lastname\":\"bhuva\"\r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/student/edit/660c2e437248711c75c1f0e8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"student",
+								"edit",
+								"660c2e437248711c75c1f0e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/student/delete/660c2e437248711c75c1f0e8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"student",
+								"delete",
+								"660c2e437248711c75c1f0e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJrYmh1dmEwN0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIwNzE4NjMsImV4cCI6MTcxMjA3NTQ2M30._p7mCZtvmuUIj_xq_w0Y7BJ0U_FwnkfzSxQDC6j02qQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/student/660c2e437248711c75c1f0e8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"student",
+								"660c2e437248711c75c1f0e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "singup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"raj\",\r\n    \"lastname\": \"bhuva\",\r\n    \"email\": \"rkbhuva569@gmail.com\",\r\n\"password\":\"123\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/singup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"singup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"rkbhuva569@gmail.com\",\r\n\"password\":\"123\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "emailVerfication",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"rkbhuva569@gmail.com\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emailverfication",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emailverfication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetpassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"rkbhuva569@gmail.com\",\r\n\"password\":\"456\",\r\n\"confirmpassword\":\"456\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/resetpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"resetpassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

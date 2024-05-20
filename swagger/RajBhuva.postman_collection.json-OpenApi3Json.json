@@ -1,0 +1,721 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RajBhuva",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/product": {
+      "post": {
+        "tags": [
+          "product"
+        ],
+        "summary": "Addproduct",
+        "operationId": "Addproduct",
+        "parameters": [
+          {
+            "name": "authentication",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "\"Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvd2F3eWtAbWFpbGluYXRvci5jb20iLCJpYXQiOjE3MTIwNTg2NjAsImV4cCI6MTcxMjA2MjI2MH0.uQKG6S3RInqroQEIKoM7xaYV0QDya6v6iim37kD6eDo\""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AddproductRequest"
+                  },
+                  {
+                    "example": {
+                      "product_name": "banaana",
+                      "price": 705,
+                      "descrption": "banana labore dol"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "product_name": "banaana",
+                "price": 705,
+                "descrption": "banana labore dol"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "product"
+        ],
+        "summary": "get product",
+        "operationId": "getproduct",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/product/edit/660b03134fbf9df2b1f2abb3": {
+      "put": {
+        "tags": [
+          "product"
+        ],
+        "summary": "edit data",
+        "operationId": "editdata",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/editdatarequest"
+                  },
+                  {
+                    "example": {
+                      "product_name": "apple",
+                      "price": 705,
+                      "descrption": "apple labore dol"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "product_name": "apple",
+                "price": 705,
+                "descrption": "apple labore dol"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/product/delete/660b031f4fbf9df2b1f2abb5": {
+      "delete": {
+        "tags": [
+          "product"
+        ],
+        "summary": "delete product",
+        "operationId": "deleteproduct",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/product/660b03134fbf9df2b1f2abb3": {
+      "get": {
+        "tags": [
+          "product"
+        ],
+        "summary": "get one data",
+        "operationId": "getonedata",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "student"
+        ],
+        "summary": "get data",
+        "operationId": "getdata",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/student": {
+      "post": {
+        "tags": [
+          "student"
+        ],
+        "summary": "add student",
+        "operationId": "addstudent",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/addstudentrequest"
+                  },
+                  {
+                    "example": {
+                      "firstname": "raj",
+                      "lastname": "bhuva"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "firstname": "raj",
+                "lastname": "bhuva"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/student/edit/660c2e437248711c75c1f0e8": {
+      "put": {
+        "tags": [
+          "student"
+        ],
+        "summary": "edit data",
+        "operationId": "Puteditdata",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/editdatarequest1"
+                  },
+                  {
+                    "example": {
+                      "firstname": "rk",
+                      "lastname": "bhuva"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "firstname": "rk",
+                "lastname": "bhuva"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/student/delete/660c2e437248711c75c1f0e8": {
+      "delete": {
+        "tags": [
+          "student"
+        ],
+        "summary": "delete data",
+        "operationId": "deletedata",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/student/660c2e437248711c75c1f0e8": {
+      "get": {
+        "tags": [
+          "student"
+        ],
+        "summary": "get one data",
+        "operationId": "Getgetonedata",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/singup": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "singup",
+        "operationId": "singup",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/singuprequest"
+                  },
+                  {
+                    "example": {
+                      "firstname": "raj",
+                      "lastname": "bhuva",
+                      "email": "rkbhuva569@gmail.com",
+                      "password": "123"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "firstname": "raj",
+                "lastname": "bhuva",
+                "email": "rkbhuva569@gmail.com",
+                "password": "123"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/login": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "login",
+        "operationId": "login",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/loginrequest"
+                  },
+                  {
+                    "example": {
+                      "email": "rkbhuva569@gmail.com",
+                      "password": "123"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email": "rkbhuva569@gmail.com",
+                "password": "123"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/emailverfication": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "emailVerfication",
+        "operationId": "emailVerfication",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/emailVerficationRequest"
+                  },
+                  {
+                    "example": {
+                      "email": "rkbhuva569@gmail.com"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email": "rkbhuva569@gmail.com"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/resetpassword": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "resetpassword",
+        "operationId": "resetpassword",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/resetpasswordrequest"
+                  },
+                  {
+                    "example": {
+                      "email": "rkbhuva569@gmail.com",
+                      "password": "456",
+                      "confirmpassword": "456"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email": "rkbhuva569@gmail.com",
+                "password": "456",
+                "confirmpassword": "456"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddproductRequest": {
+        "title": "AddproductRequest",
+        "required": [
+          "product_name",
+          "price",
+          "descrption"
+        ],
+        "type": "object",
+        "properties": {
+          "product_name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descrption": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "product_name": "banaana",
+          "price": 705,
+          "descrption": "banana labore dol"
+        }
+      },
+      "editdatarequest": {
+        "title": "editdatarequest",
+        "required": [
+          "product_name",
+          "price",
+          "descrption"
+        ],
+        "type": "object",
+        "properties": {
+          "product_name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descrption": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "product_name": "apple",
+          "price": 705,
+          "descrption": "apple labore dol"
+        }
+      },
+      "addstudentrequest": {
+        "title": "addstudentrequest",
+        "required": [
+          "firstname",
+          "lastname"
+        ],
+        "type": "object",
+        "properties": {
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "firstname": "raj",
+          "lastname": "bhuva"
+        }
+      },
+      "editdatarequest1": {
+        "title": "editdatarequest1",
+        "required": [
+          "firstname",
+          "lastname"
+        ],
+        "type": "object",
+        "properties": {
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "firstname": "rk",
+          "lastname": "bhuva"
+        }
+      },
+      "singuprequest": {
+        "title": "singuprequest",
+        "required": [
+          "firstname",
+          "lastname",
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "firstname": "raj",
+          "lastname": "bhuva",
+          "email": "rkbhuva569@gmail.com",
+          "password": "123"
+        }
+      },
+      "loginrequest": {
+        "title": "loginrequest",
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "rkbhuva569@gmail.com",
+          "password": "123"
+        }
+      },
+      "emailVerficationRequest": {
+        "title": "emailVerficationRequest",
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "rkbhuva569@gmail.com"
+        }
+      },
+      "resetpasswordrequest": {
+        "title": "resetpasswordrequest",
+        "required": [
+          "email",
+          "password",
+          "confirmpassword"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "confirmpassword": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "rkbhuva569@gmail.com",
+          "password": "456",
+          "confirmpassword": "456"
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "product"
+    },
+    {
+      "name": "student"
+    },
+    {
+      "name": "user"
+    }
+  ]
+}
